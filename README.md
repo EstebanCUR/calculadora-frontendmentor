@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Frontend Mentor - Calculator app
 
 ![Design preview for the Calculator app coding challenge](./design/desktop-preview.jpg)
@@ -92,3 +93,7 @@ We love receiving feedback! We're always looking to improve our challenges and o
 This challenge is completely free. Please share it with anyone who will find it useful for practice.
 
 **Have fun building!** 🚀
+=======
+# calculadora-frontendmentor
+Reto de FrontendMentor
+>>>>>>> 23237a20267b6efc55531ffe5a752b9b78933c1b
