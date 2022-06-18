@@ -1,0 +1,13 @@
+@use 'mixins';
+@use 'variables';
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'League Spartan', sans-serif;
+    font-weight: 700;
+    font-size: mixins.pixel-rem(32);
+}

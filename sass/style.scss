@@ -1,0 +1,164 @@
+@use 'reset';
+@use 'mixins';
+@use 'variables';
+
+.container{
+    width: 100%;
+    background-color: variables.$t1-fondoTotal;
+    padding: mixins.pixel-rem(24);
+    height: 100vh;
+    color: variables.$white;
+    transition: .3s ease all;
+    &.theme2{
+        background-color: variables.$t2-fondoTotal;
+        color: variables.$t2-colorLetra;
+    }
+    &.theme3{
+        background-color: variables.$t3-fondoTotal;
+        color: variables.$t3-colorLetra;
+    }
+
+}
+
+.header{
+    width: 100%;
+    &__nav{
+        @include mixins.flexbox(row,flex-start,space-between)
+    }
+    &__screen{
+        background-color: variables.$t1-screenBackground;
+        margin: mixins.pixel-rem(32) 0;
+        padding: mixins.pixel-rem(24);
+        @include mixins.flexbox(column,flex-end,center);
+        border-radius: mixins.pixel-rem(10);
+        min-height: mixins.pixel-rem(112);
+        overflow: hidden;
+        .container.theme2 &{
+            background-color: variables.$t2-screenBackground;
+        }
+        .container.theme3 &{
+            background-color: variables.$t3-fondoSector;
+        }
+    }
+    &__number-up{
+        font-size: mixins.pixel-rem(16);
+    }
+}
+
+.theme{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 50%;
+    &__name{
+        font-size: mixins.pixel-rem(12);
+        text-transform: uppercase;
+        align-self: end;
+        grid-row: 2/3;
+    }
+    &__numbers{
+        @include mixins.flexbox(row,flex-start,space-evenly);
+        font-size: mixins.pixel-rem(12);
+        grid-column: 2/3;
+    }
+
+    &__circle-box{
+        grid-column: 2/3;
+        justify-self: center;
+        background-color: variables.$t1-fondoSector;
+        width: 70%;
+        height: mixins.pixel-rem(25);
+        border-radius: mixins.pixel-rem(20);
+        @include mixins.flexbox(row,center,flex-start);
+        .container.theme2 &{
+            background-color: variables.$t2-fondoSector;
+            @include mixins.flexbox(row,center,center);
+        }
+        .container.theme3 &{
+            background-color: variables.$t3-fondoSector;
+            @include mixins.flexbox(row,center,flex-end);
+        }
+    }
+
+    &__circle{
+        width: mixins.pixel-rem(16);
+        height: mixins.pixel-rem(16);
+        border-radius: 100%;
+        background-color: variables.$t1-fondoTeclaSymbol;
+        .container.theme2 &{
+            background-color: variables.$t2-fondoTeclaSymbol;
+        }
+        .container.theme3 &{
+            background-color: variables.$t3-fondoTeclaSymbol;
+        }
+    }
+}
+
+.buttons{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: mixins.pixel-rem(10);
+    background-color: variables.$t1-fondoSector;
+    padding: mixins.pixel-rem(24);
+    border-radius: mixins.pixel-rem(10);
+    .container.theme2 &{
+        background-color: variables.$t2-fondoSector;
+    }
+    .container.theme3 &{
+        background-color: variables.$t3-fondoSector;
+    }
+}
+
+.button{
+    cursor: pointer;
+    font-size: mixins.pixel-rem(32);
+    font-weight: 700;
+    width: 100%;
+    height: mixins.pixel-rem(64);
+    border: none;
+    border-radius: mixins.pixel-rem(8);
+    &__number{
+        background-color: variables.$t1-fondoTeclaNumber;
+        color: variables.$t1-colorLetra;
+    }
+    .container.theme2 &{
+        color: variables.$t2-colorLetra;
+        background-color: variables.$t2-fondoTeclaNumber;
+    }
+    .container.theme3 &{
+        color: variables.$t3-colorLetra;
+        background-color: variables.$t3-fondoTeclaNumber;
+    }
+    
+
+    &__del{
+        background-color: variables.$t1-fondoTeclaWord;
+        color: variables.$white;
+        font-size: mixins.pixel-rem(16);
+        .container.theme2 &{
+            color: variables.$white;
+            background-color: variables.$t2-fondoTeclaWord;
+        }
+        .container.theme3 &{
+            color: variables.$white;
+            background-color: variables.$t3-fondoTeclaWord;
+        }
+    }
+
+    &__equal{
+        background-color: variables.$t1-fondoTeclaSymbol;
+        color: variables.$white;
+        font-size: mixins.pixel-rem(16);
+        .container.theme2 &{
+            color: variables.$white;
+            background-color: variables.$t2-fondoTeclaSymbol;
+        }
+        .container.theme3 &{
+            color: variables.$t3-colorLetraSymbol;
+            background-color: variables.$t3-fondoTeclaSymbol;
+        }
+    }
+
+    &--xl{
+        grid-column: span 2;
+    }
+}

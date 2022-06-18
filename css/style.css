@@ -1,0 +1,184 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "League Spartan", sans-serif;
+  font-weight: 700;
+  font-size: 2rem;
+}
+
+.container {
+  width: 100%;
+  background-color: hsl(222deg, 26%, 31%);
+  padding: 1.5rem;
+  height: 100vh;
+  color: hsl(0deg, 0%, 100%);
+  transition: 0.3s ease all;
+}
+.container.theme2 {
+  background-color: hsl(0deg, 0%, 90%);
+  color: hsl(60deg, 10%, 19%);
+}
+.container.theme3 {
+  background-color: hsl(268deg, 75%, 9%);
+  color: hsl(52deg, 100%, 62%);
+}
+
+.header {
+  width: 100%;
+}
+.header__nav {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+.header__screen {
+  background-color: hsl(224deg, 36%, 15%);
+  margin: 2rem 0;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  border-radius: 0.625rem;
+  min-height: 7rem;
+  overflow: hidden;
+}
+.container.theme2 .header__screen {
+  background-color: hsl(0deg, 0%, 93%);
+}
+.container.theme3 .header__screen {
+  background-color: hsl(268deg, 71%, 12%);
+}
+.header__number-up {
+  font-size: 1rem;
+}
+
+.theme {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  width: 50%;
+}
+.theme__name {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  align-self: end;
+  grid-row: 2/3;
+}
+.theme__numbers {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  font-size: 0.75rem;
+  grid-column: 2/3;
+}
+.theme__circle-box {
+  grid-column: 2/3;
+  justify-self: center;
+  background-color: hsl(223deg, 31%, 20%);
+  width: 70%;
+  height: 1.5625rem;
+  border-radius: 1.25rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+}
+.container.theme2 .theme__circle-box {
+  background-color: hsl(0deg, 5%, 81%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.container.theme3 .theme__circle-box {
+  background-color: hsl(268deg, 71%, 12%);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-end;
+}
+.theme__circle {
+  width: 1rem;
+  height: 1rem;
+  border-radius: 100%;
+  background-color: hsl(6deg, 63%, 50%);
+}
+.container.theme2 .theme__circle {
+  background-color: hsl(25deg, 98%, 40%);
+}
+.container.theme3 .theme__circle {
+  background-color: hsl(176deg, 100%, 44%);
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.625rem;
+  background-color: hsl(223deg, 31%, 20%);
+  padding: 1.5rem;
+  border-radius: 0.625rem;
+}
+.container.theme2 .buttons {
+  background-color: hsl(0deg, 5%, 81%);
+}
+.container.theme3 .buttons {
+  background-color: hsl(268deg, 71%, 12%);
+}
+
+.button {
+  cursor: pointer;
+  font-size: 2rem;
+  font-weight: 700;
+  width: 100%;
+  height: 4rem;
+  border: none;
+  border-radius: 0.5rem;
+}
+.button__number {
+  background-color: hsl(30deg, 25%, 89%);
+  color: hsl(221deg, 14%, 31%);
+}
+.container.theme2 .button {
+  color: hsl(60deg, 10%, 19%);
+  background-color: hsl(45deg, 7%, 89%);
+}
+.container.theme3 .button {
+  color: hsl(52deg, 100%, 62%);
+  background-color: hsl(268deg, 47%, 21%);
+}
+.button__del {
+  background-color: hsl(225deg, 21%, 49%);
+  color: hsl(0deg, 0%, 100%);
+  font-size: 1rem;
+}
+.container.theme2 .button__del {
+  color: hsl(0deg, 0%, 100%);
+  background-color: hsl(185deg, 42%, 37%);
+}
+.container.theme3 .button__del {
+  color: hsl(0deg, 0%, 100%);
+  background-color: hsl(281deg, 89%, 26%);
+}
+.button__equal {
+  background-color: hsl(6deg, 63%, 50%);
+  color: hsl(0deg, 0%, 100%);
+  font-size: 1rem;
+}
+.container.theme2 .button__equal {
+  color: hsl(0deg, 0%, 100%);
+  background-color: hsl(25deg, 98%, 40%);
+}
+.container.theme3 .button__equal {
+  color: hsl(198deg, 20%, 13%);
+  background-color: hsl(176deg, 100%, 44%);
+}
+.button--xl {
+  grid-column: span 2;
+}
+
+/*# sourceMappingURL=style.css.map */

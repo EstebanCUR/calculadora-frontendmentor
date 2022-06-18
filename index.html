@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@700&display=swap" rel="stylesheet"> 
+  <title>Frontend Mentor | Calculator app</title>
+
+</head>
+<body>
+  <section class="container">
+    <header class="header">
+      <div class="header__nav">
+        <span class="header__logo">calc</span>
+        <div class="theme">
+          <div class="theme__name">Theme</div>
+          <div class="theme__numbers">
+            <div class="theme__number">1</div>
+            <div class="theme__number">2</div>
+            <div class="theme__number">3</div>
+          </div>
+          <div class="theme__circle-box" id="switch">
+            <div class="theme__circle"></div>
+          </div>
+        </div>
+      </div>
+      <div class="header__screen">
+        <div class="header__number-up" data-numberUp></div>
+        <div class="header__number-down" data-numberDown></div>
+      </div>
+    </header>
+    <main class="buttons">
+      <button class="button" data-number>7</button>
+      <button class="button" data-number>8</button>
+      <button class="button" data-number>9</button>
+      <button class="button button__del" data-del>DEL</button>
+      <button class="button" data-number>4</button>
+      <button class="button" data-number>5</button>
+      <button class="button" data-number>6</button>
+      <button class="button" data-operator>+</button>
+      <button class="button" data-number>1</button>
+      <button class="button" data-number>2</button>
+      <button class="button" data-number>3</button>
+      <button class="button" data-operator>-</button>
+      <button class="button" data-number>.</button>
+      <button class="button" data-number>0</button>
+      <button class="button" data-operator>/</button>
+      <button class="button" data-operator>x</button>
+      <button class="button button--xl button__del" data-del-all>RESET</button>
+      <button class="button button--xl button__equal" data-equal>=</button>
+    </main>
+  </section>
+  <script src="./script/main.js"></script>
+  <script src="./script/theme.js"></script>
+</body>
+</html>
